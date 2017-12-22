@@ -1,0 +1,103 @@
+.header
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	z-index: 5000
+	display: grid
+	grid-template-areas: "h-logo" "h-options" "h-nav" "h-footer"
+	grid-template-rows: [h-logo] 300px [h-options] min-content [h-nav] 1fr [h-footer] min-content
+	width: $sidebar-width
+	height: 100%
+	background-color: $main-color
+	box-shadow: $main-shadow
+
+	&--logo
+		grid-area: h-logo
+		grid-row: 1 / 2
+		align-self: center
+		text-align: center
+
+		.logo-face
+			position: relative
+			display: inline-block
+			padding-bottom: 10px
+			text-align: center
+
+			img
+				width: 150px
+				max-width: 100%
+				height: 150px
+				border-radius: 50%
+				transition: box-shadow .3s ease
+				box-shadow: 0px 0px 0px 8px darken($main-color, 5%)
+
+			&:hover
+
+				img
+					box-shadow: 0px 0px 0px 12px darken($main-color, 7%)
+
+			&:after
+				position: absolute
+				right: 15px
+				bottom: 5px
+				content: ''
+				width: 25px
+				height: 25px
+				border: 3px solid #fff
+				border-radius: 50%
+				background: linear-gradient(#2196F3 0%, #2196F3 50%, #FFC107 50%, #FFC107 100%)
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1)
+
+		span
+			display: block
+			margin-top: 10px
+			color: #fff
+			text-transform: uppercase
+			font:
+				size: 13px
+				weight: $regular
+
+			&:last-child
+				font-size: 10px
+
+	&--options
+		grid-area: h-options
+		grid-row: 2 / 3
+		align-self: center
+
+	&--nav
+		grid-area: h-nav
+		grid-row: 3 / 4
+		align-self: center
+
+		.navigation
+			text-align: center
+
+			a
+				display: block
+				margin: 0
+				padding: 15px 0
+				font-size: 18px
+				color: $lightwhite
+				transition: all 0.2s ease-in
+				text-transform: capitalize
+
+				&:hover
+					background-color: $lightwhite
+					color: $main-color
+					transition: all 0.2s ease-in
+
+				&.active
+					background-color: $lightwhite
+					color: $main-color
+					transition: all 0.2s ease-in
+
+	&--footer
+		grid-area: h-footer
+		grid-row: 4
+		padding: 10px 0
+		text-align: center
+		color: #fff
+		font-size: 10px
+		text-transform: uppercase
