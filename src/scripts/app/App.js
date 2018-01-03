@@ -11,11 +11,16 @@ import Footer from './components/Footer';
 import PropTypes from 'prop-types';
 import Routes from './Routes';
 import Sidebar from './components/Sidebar';
+import { defaultProps } from 'recompose';
 
 const en = require('./locales/en');
 const ru = require('./locales/ru');
 
 const locales = { en, ru };
+
+const enhance = defaultProps({
+	counter: 0,
+});
 
 const App = () => {
 	return (
@@ -37,4 +42,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default enhance(App);

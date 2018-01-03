@@ -7,29 +7,29 @@ import ResumeItem from '../../views/ResumeItem';
 class Skills extends Component {
 	render() {
 		return (
-			<section class="skills section" id="skills">
+			<section className="skills section" id="skills">
 
-				<div class="row">
+				<div className="row">
 
-					<div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-offset="200">
+					<div className="section-title wow fadeInUp" data-wow-duration="1s" data-wow-offset="200">
 
-						<h2 class="title">SEO.skills.title</h2>
+						<h2 className="title">SEO.skills.title</h2>
 
 						<p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>
 
-						<span class="separator"></span>
+						<span className="separator"></span>
 
 					</div>
 
 				</div>
 
-				<div class="row">
+				<div className="row">
 
 				</div>
 
-				<div class="row">
+				<div className="row">
 
-					<div class="skills-content">
+					<div className="skills-content">
 
 						<h2>My professional strengths</h2>
 
@@ -39,7 +39,7 @@ class Skills extends Component {
 
 				</div>
 
-				<div class="parallax-title right-pos rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
+				<div className="parallax-title right-pos rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
 					SEO.skills.description
 				</div>
 
