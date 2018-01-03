@@ -15,21 +15,17 @@ const configureStore = (initialState) => {
 	const store = createStoreWithMiddleware(
 		reducer,
 		initialState,
-		composeWithDevTools(
-			applyMiddleware(thunk, logger),
-		),
+		composeWithDevTools(applyMiddleware(thunk, logger)),
 	);
 
 	if (module.hot) {
-		// Enable Webpack hot module replacement for reducers
+		// Enable Webpack hot module replacement for reducersы
 		module.hot.accept('../reducers/reducers', () => {
 			try {
 				const nextRootReducer = require('../reducers/reducers').default;
 				store.replaceReducer(nextRootReducer);
 			} catch (error) {
-				console.error(
-					chalk.red(`==> 😭  Reducer hot reloading error ${error}`),
-				);
+				console.error(chalk.red(`==> 😭  Reducer hot reloading error ${error}`));
 			}
 		});
 	}

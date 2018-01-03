@@ -1,0 +1,36 @@
+.section-title
+	@include grid-column(12)
+	margin-bottom: 30px
+
+	.title
+		position: relative
+		width: 100%
+		color: $main-color
+		font-size: 46px
+		font-weight: $semi-bold
+		text-align: left
+		text-transform: uppercase
+
+		&:before
+			position: absolute
+			top: 15px
+			left: -20px
+			width: 100px
+			height: 100px
+			content: ''
+			background: $main-color
+			opacity: 0.10
+
+	p
+		max-width: 500px
+		font:
+			size: 12px
+			style: italic
+
+	.subtitle
+		display: inline-block
+		margin-top: 30px
+		padding: 5px 10px
+		color: $lightwhite
+		background-color: $main-color
+		font-weight: $light

@@ -1,0 +1,29 @@
+.form
+	@include grid-container
+	padding-top: 50px
+
+.md-input-container,
+.submit-comtainer
+	@include grid-column(12)
+
+.submit-comtainer
+	margin-top: 15px
+	text-align: center
+
+	.btn-submit
+		text-transform: uppercase
+
+.contact-info
+	margin-top: 70px
+	text-align: center
+
+	&__item
+		@include grid-column(4)
+
+		p
+			margin: 0
+			padding-top: 15px
+			font:
+				size: 14px
+				weight: $semi-bold
+			line-height: 18px

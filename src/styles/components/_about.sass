@@ -1,0 +1,32 @@
+.about-block
+	@include grid-container
+	margin-bottom: 30px
+
+	&__item
+		@include grid-column(4)
+		margin-bottom: 25px
+
+	&__icon
+		width: 64px
+		height: 64px
+		float: left
+
+	&__info
+		float: left
+		margin-left: 25px
+		text-align: left
+
+		h4
+			color: $accent-color
+			font:
+				size: 20px
+				weight: $bold
+			text-transform: uppercase
+			margin: 0 0 5px
+		p
+			font:
+				size: 16px
+				weight: $semi-bold
+
+.about-text
+	@include grid-column(12)

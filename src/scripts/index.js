@@ -1,7 +1,5 @@
 import '../styles/main.sass';
 
-import { BrowserRouter, Link, NavLink, Route, Switch } from 'react-router-dom';
-
 import App from './app/App';
 import { Provider } from 'react-redux';
 import React from 'react';

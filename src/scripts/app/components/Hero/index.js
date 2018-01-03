@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import Button from 'material-ui/Button';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Hero extends Component {
 	render() {
@@ -14,20 +16,20 @@ class Hero extends Component {
 						<div className="intro-content">
 
 							<h1 className="wow fadeInDown" data-wow-duration="1s" data-wow-offset="200">
-								<span>dfdsf</span>
-								sdfdsf
-							</h1>
-
-							<span className="element">sdfdsf</span>
+								<span>Hello i'm</span>
+								Kirill Vorobiov
+						</h1>
 
 							<div className="cv-download">
 
 								<Button
+									component={Link}
+									to="/contacts"
 									raised
 									color="primary"
 								>
 									Hire me
-								</Button>
+							</Button>
 
 								<Button
 									raised
@@ -35,7 +37,25 @@ class Hero extends Component {
 									download="/files/CV_Kirill Vorobiov.pdf"
 								>
 									Download my CV
-								</Button>
+							</Button>
+
+							</div>
+
+							<div className="cv-download">
+
+								<Button
+									raised
+									color="primary"
+								>
+									en
+							</Button>
+
+								<Button
+									raised
+									color="primary"
+								>
+									ru
+							</Button>
 
 							</div>
 						</div>
@@ -44,6 +64,6 @@ class Hero extends Component {
 			</section >
 		)
 	}
-}
+};
 
 export default Hero;

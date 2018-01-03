@@ -71,10 +71,6 @@ const config = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.json$/,
-				use: 'json-loader',
-			},
-			{
 				test: /\.(sass|scss|css)$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',

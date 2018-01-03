@@ -1,33 +1,42 @@
-import React, { Component } from 'react';
-
+import {
+	Link,
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import React from 'react';
+import _ from 'lodash';
 
-const Sidebar = (props) => {
+const Sidebar = ({ locale }) => {
+	console.log(locale);
 	return (
 		<aside className="header" id="header">
 
 			<div className="header--logo">
 				<div className="logo-face">
-					<a><img src="/images/logo200.jpg" alt="logo" /></a>
+					<Link to="/">
+						<img src="/images/logo200.jpg" alt="logo" />
+					</Link>
 				</div>
-				<span>Kirill Vorobiov</span>
-				<span>Front-end // Designer</span>
+				<span>{locale.name}</span>
+				<span>{locale.post}</span>
 			</div>
 
 			<div className="header--options" />
 
 			<div className="header--nav">
 				<nav className="navigation" role="navigation">
-					<menu className="menu">
-						<a>hghgf</a>
-					</menu>
+					<Link to="/">home</Link>
+					<Link to="/about">about me</Link>
+					<Link to="/resume">resume</Link>
+					<Link to="/skills">skills</Link>
+					<Link to="/portfolio">portfolio</Link>
+					<Link to="/contacts">contacts</Link>
 				</nav>
-
 			</div>
 
 			<div className="header--footer">
 				<div className="contacts-data">
-					© Kirill Vorobiov <br /> 2017 all rights reserved
+					<span>© {locale.name}</span>
+					<span>{locale.copyright}</span>
 				</div>
 			</div>
 		</aside>
