@@ -3,7 +3,7 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const config = {
 
@@ -44,7 +44,7 @@ const config = {
 		historyApiFallback: true,
 		port: 8080,
 		inline: true,
-		open: true,
+		// open: true,
 		stats: {
 			colors: true,
 			hash: false,
@@ -138,9 +138,9 @@ const config = {
 		/**
 		 * @link https://www.npmjs.com/package/open-browser-webpack-plugin
 		 */
-		// new OpenBrowserPlugin({
-		// 	url: 'http://localhost:8080/',
-		// }),
+		new OpenBrowserPlugin({
+			url: 'http://localhost:8080/',
+		}),
 	],
 
 };
